@@ -16,8 +16,8 @@ func init() {
 func NewRootCmd() *cobra.Command {
 	RootCmd := &cobra.Command{
 		Use:   getCommandLineExecutable(),
-		Short: "Hashnode LLM",
-		Long:  "Hashnode LLM is a CLI tool for Hashnode's Learning Lab Manager. ",
+		Short: "Tavoli CLI Tool",
+		Long:  "Tavoli is a CLI tool for managing your tables.",
 	}
 
 	RootCmd.AddCommand(newServeCmd())

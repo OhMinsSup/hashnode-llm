@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/OhMinsSup/hashnode-llm/config"
-	"github.com/OhMinsSup/hashnode-llm/server"
+	"github.com/OhMinsSup/tavoli/config"
+	"github.com/OhMinsSup/tavoli/server"
 	"github.com/spf13/cobra"
 )
 
@@ -40,10 +40,9 @@ func newServeCmd() *cobra.Command {
 }
 
 func serve(cmd *cobra.Command, config *config.Configuration) error {
-	_, err := server.NewServer()
+	_, err := server.NewServer(config)
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
